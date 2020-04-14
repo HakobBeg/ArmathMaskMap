@@ -1,0 +1,16 @@
+<div class="all">
+<h1 mat-dialog-title>Խմբագրեք Բլոկը</h1>
+<div class="dialogContent" mat-dialog-content>
+  <label>Ներմուծեք Անվանումը</label>
+    <input  placeholder="Անվանում" [(ngModel)]="data.name">
+
+  <label *ngIf="data.action==='addCount'">Ներմուծեք քանակը</label>
+  <input  *ngIf="data.action==='addCount'"  placeholder="Քանակը" [(ngModel)]="data.count">
+
+
+</div>
+<div class="dialogActions" mat-dialog-actions>
+  <button (click)="onNoClick()">Չեղարկել</button>
+  <button [mat-dialog-close]="data">Հաստատել</button>
+</div>
+</div>

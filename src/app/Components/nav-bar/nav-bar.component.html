@@ -1,0 +1,42 @@
+<mat-toolbar *ngIf="winSize>1150">
+
+  <div class="ToolBar">
+    <label>Արմաթ Դիմավահանների Ցուցակ</label>
+
+    <div class="ZoomInContainer">
+      <span>Մասշտաբ</span>
+      <div class="ZoomInButtonsContainer">
+        <button (click)="dispatchAction('extraSmall')" class="ZoomInButton">X1</button>
+        <button (click)="dispatchAction('small')" class="ZoomInButton">X2</button>
+        <button (click)="dispatchAction('medium')" class="ZoomInButton">X3</button>
+        <button (click)="dispatchAction('big')" class="ZoomInButton">X4</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="AdminPanel">
+
+
+    <div *ngIf="isLoged" class="LogedContent">
+      <label>Ադմինիստրատոր` {{getUserDisplayName()}}</label>
+      <button (click)="saveChanges()">Պահպանել</button>
+      <button (click)="logOut()">Դուրս Գալ</button>
+    </div>
+
+
+    <div *ngIf="!isLoged" class="UnLogedContent">
+        <button (click)="openDialog()">Մուտք Գործել</button>
+    </div>
+  </div>
+</mat-toolbar>
+
+
+<mat-toolbar *ngIf="winSize<=1150">
+
+  <div class="test">
+    <label>Արմաթ Դիմավահանների Ցուցակ</label>
+  </div>
+
+
+</mat-toolbar>

@@ -1,0 +1,103 @@
+
+
+
+
+
+<div *ngIf="winWidth>1150" [@startAnimationTrigger] = parentAnimState>
+
+    <ul [@startAnimationTrigger] = "animationState" cdkDrag class="GlobalUl">
+      <div class="GlobalHeader" (mouseenter)="globalAddShow=true" (mouseleave)="globalAddShow=false"><label>Ընդհանուր
+        քանակը {{globalSum}}
+      </label>
+        <img (click)="addCity()" matTooltip="Ավելացնել նոր բլոկ" [matTooltipPosition]="'right'"
+             *ngIf="globalAddShow && isLoggedIn"
+             src="../../../assets/plus.svg"/>
+      </div>
+      <ul #listDef class="InnerLists">
+
+        <div class="BigLine"></div>
+        <li class="InnerListLi" *ngFor="let a of data">
+
+          <div (mouseenter)="a.flag=true" (mouseleave)="a.flag=false" class="InnerHeader">
+            <img (click)="removeCity(a.id)" matTooltip="Ջնջել հետևյալ բլոկը" [matTooltipPosition]="'left'" class="left"
+                 *ngIf="a.flag  && isLoggedIn"
+                 src="../../../assets/remove.svg"/>
+
+            <div class="InnerListDataLabels">
+              <label (click)="(isLoggedIn)?a.nameFlag=true:a.nameFlag=false;" *ngIf="!a.nameFlag" class="innerFirstlab">{{a.name }}</label>
+              <label *ngIf="a.nameFlag" class="innerFirstinp"> <input #ref (mouseenter)="ref.focus()" (focusout)="a.nameFlag=false" (keyup.enter)="a.nameFlag=false"  (keyup.escape)="a.nameFlag=false"
+                                                                      [(ngModel)]="a.name"/>
+                <button (click)="a.nameFlag=false">ok</button>
+              </label>
+              <label class="innerFirstlab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+              <label class="innerSecondtlab">{{a.count}}</label>
+            </div>
+
+            <img (click)="addPlc(a.id)" class="InlinePlus" matTooltip="Ավելացնել նոր բլոկ"
+                 [matTooltipPosition]="'below'" *ngIf="a.flag  && isLoggedIn" src="../../../assets/plus.svg"/>
+          </div>
+          <ul class="DataList">
+            <li (mouseenter)="b.flag=true" (mouseleave)="b.flag=false" class="InlineData" *ngFor="let b of a.list">
+              <img (click)="removePlace(a.id,b.id)" matTooltip="Ջնջել հետևյալ բլոկը" [matTooltipPosition]="'left'" class="left"
+                   *ngIf="b.flag  && isLoggedIn"
+                   src="../../../assets/remove.svg"/>
+              <div class="listsLabels">
+                <label (click)="(isLoggedIn)?b.nameFlag=true: b.nameFlag=false" *ngIf="!b.nameFlag"  class="innerFirstlab">{{b.name }}</label>
+                <label *ngIf="b.nameFlag" class="placeFirstLabel" > <input #ref1 (mouseenter)="ref1.focus()" (focusout)="b.nameFlag=false" (keyup.enter)="b.nameFlag=false"  (keyup.escape)="b.nameFlag=false"
+                                                                        [(ngModel)]="b.name"/>
+                  <button (click)="b.nameFlag=false">ok</button>
+                </label>
+
+
+                <label class="innerFirstlab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+
+                <label (click)="(isLoggedIn)?b.countFlag=true: b.countFlag=false" *ngIf="!b.countFlag" class="sc">{{b.count}}</label>
+
+                <label *ngIf="b.countFlag" class="placeFirstLabel" > <input class="inputTmp" #ref2 (mouseenter)="ref2.focus()" (focusout)="b.countFlag=false; calculate()" (keyup.enter)="b.countFlag=false; calculate()"  (keyup.escape)="b.countFlag=false; calculate()"
+                                                                           [(ngModel)]="b.count"/>
+                  <button (click)="(isLoggedIn)?b.countFlag=false:b.countFlag=false">ok</button>
+                </label>
+
+              </div>
+
+
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </ul>
+
+
+</div>
+
+
+
+
+<div class="MobileContent" *ngIf="winWidth<=1150">
+  <div class="GlobalHeader" (mouseenter)="globalAddShow=true" (mouseleave)="globalAddShow=false"><label>Ընդհանուր
+    քանակը {{globalSum}}
+  </label>
+  </div>
+
+<ul class="InnerListsMobile">
+  <li class="InnerListLi" *ngFor="let a of data">
+
+    <div class="GlobalHeader" (mouseenter)="globalAddShow=true" (mouseleave)="globalAddShow=false"><label>{{a.name+ "        "+a.count}}
+    </label>
+    </div>
+
+    <ul class="DataListMobile">
+      <li class="InnerListLi" *ngFor="let b of a.list">
+        <div class="GlobalHeader" style="background-color: rgba(42, 190, 197, 0.85);color: #92006e" (mouseenter)="globalAddShow=true" (mouseleave)="globalAddShow=false"><label>{{b.name+ "        "+b.count}}
+        </label>
+        </div>
+      </li>
+    </ul>
+      </li>
+
+
+</ul>
+
+</div>

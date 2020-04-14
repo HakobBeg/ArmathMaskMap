@@ -1,0 +1,158 @@
+mat-toolbar {
+  z-index: 1000;
+  position: fixed;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(205, 205, 205, 0.12);
+  background-color: rgba(42, 190, 197, 0.63);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: unset !important;
+}
+
+
+.AdminPanel {
+  text-align: center;
+  width: 500px;
+}
+
+.ToolBar {
+  width: calc(100% - 500px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.UnLogedContent {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.UnLogedContent button {
+  width: 200px;
+  background-color: rgba(146, 0, 110, 0.77);
+  border-radius: 3px;
+  border: none;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 13px;
+  color: whitesmoke;
+  transition: backgroundColor .3s ease, transform .3s ease-in;
+  outline: none;
+}
+
+.ZoomInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ZoomInContainer span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a2007d;
+}
+
+.ZoomInButtonsContainer {
+  margin-bottom: 5px;
+}
+
+.ZoomInButton{
+  width: 35px;
+  border: none;
+  height: 35px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: backgroundColor .3s ease, transform .3s ease-in;
+  margin-left: 20px;
+  text-align: center;
+  background-color: #a2007d;
+  color: white;
+  outline: none;
+}
+
+.ZoomInButton:hover {
+  background-color: #dc00a5;
+  transform: scale(1.2);
+}
+
+
+.ToolBar label{
+  background-color: rgba(146, 0, 110, 0.77);
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  color: whitesmoke;
+  font-weight: bold;
+
+}
+
+.UnLogedContent button:hover {
+  background-color: #a10079;
+  transform: scale(1.2);
+}
+
+
+.LogedContent {
+  background-color: rgba(146, 0, 110, 0.77);
+  border-radius: 3px;
+  border: none;
+  padding: 2%;
+  font-weight: bold;
+  font-size: 13px;
+  color: whitesmoke;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.LogedContent button {
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(42, 190, 197, 0.85);
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 4%;
+  transition: backgroundColor .3s ease, transform .3s ease-in;
+}
+
+.LogedContent button:hover{
+  background-color: #a10079;
+  transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 1150px) {
+
+  .test label{
+    background-color: rgba(146, 0, 110, 0.77);
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-weight: bold;
+
+  }
+
+  mat-toolbar {
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(205, 205, 205, 0.12);
+    background-color: rgba(42, 190, 197, 0.63);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px !important;
+  }
+
+}

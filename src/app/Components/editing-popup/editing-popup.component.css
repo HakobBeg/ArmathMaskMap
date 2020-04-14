@@ -1,0 +1,13 @@
+.dialogContent{
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.mat-dialog-title{
+  text-align: center;
+}
+
+.dialogActions button{
+   margin-left: 10%;
+}

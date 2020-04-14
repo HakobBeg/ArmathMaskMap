@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Մուտք</h1>
+<div mat-dialog-content>
+
+  <mat-form-field appearance="legacy">
+    <mat-label>Էլ․ Հասցե</mat-label>
+    <input [(ngModel)]="data.email" autocomplete="false" matInput placeholder="Example@gmail.ru">
+    <mat-hint>Մուտքագրեք Էլ․ հասցեն</mat-hint>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="legacy">
+    <mat-label>Գաղտնաբառ</mat-label>
+    <input [(ngModel)]="data.pass"  autocomplete="false" matInput placeholder="Tutuz2000">
+    <mat-hint>Մուտքագրեք Գաղտնաբառը</mat-hint>
+  </mat-form-field>
+<br>
+  <br>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Մուտք Գործել</button>&nbsp;&nbsp;&nbsp;&nbsp;
+  <button mat-button  (click)="onNoClick()">Չեղարկել</button>
+
+</div>
+

@@ -1,0 +1,308 @@
+.GlobalUl {
+  opacity: 1;
+}
+
+.AllContent {
+
+  width: 100%;
+  height: calc(100% - 80px);
+  margin-top: 80px;
+
+
+}
+
+
+.MapContent {
+
+
+}
+
+ul {
+  list-style: none;
+}
+
+.InnerLists {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 30px;
+  width: max-content;
+  margin: auto;
+}
+
+.InnerListLi {
+  position: relative;
+  margin: 0 20px;
+}
+
+.InnerListLi::before {
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  top: -30px;
+  content: "";
+  background-color: #a2007d;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 0 8px 0.5px #a2007d;
+}
+
+.BigLine {
+  background-color: #a2007d;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  box-shadow: 0 0 8px 0.5px #a2007d;
+}
+
+
+.GlobalUl {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: auto;
+  cursor: move;
+}
+
+.GlobalHeader {
+  position: relative;
+  background-color: #a2007dde;
+  align-self: center;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-weight: bolder;
+}
+
+.GlobalHeader img {
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  right: -14px;
+  top: 14px;
+  border-radius: 15px;
+  background-color: #a2007d;
+  cursor: cell;
+}
+
+
+.InnerHeader img {
+  width: 30px;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  right: -16px;
+  border-radius: 15px;
+  background-color: #a2007dcc;
+  cursor: cell;
+}
+
+
+.InlinePlus {
+  width: 30px;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  right: -16px;
+  border-radius: 15px;
+  background-color: #a2007dcc;
+  cursor: cell;
+}
+
+.left {
+  width: 30px;
+  border: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  left: -16px;
+  border-radius: 15px;
+  background-color: #a2007dcc;
+  cursor: grabbing;
+}
+
+
+.GlobalHeader::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background-color: #a2007d;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 0 8px 0.5px #a2007d;
+}
+
+.InnerHeader {
+  color: whitesmoke;
+  background-color: #a2007dcc;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 8px 1px rgb(37, 37, 37);
+  font-weight: bold;
+}
+
+.innerFirstinp input {
+  border-radius: 3px;
+  border: none;
+  width: 50%;
+  height: 18px;
+  outline: none;
+  background-color: rgba(42, 190, 197, 0.85);
+  color: #92006e;
+  padding: 4px;
+}
+
+.innerFirstinp button {
+  width: 10%;
+  height: 25px;
+  background-color: rgba(42, 190, 197, 0.85);
+  color: #92006e;
+  border: none;
+  border-radius: 3px;
+}
+
+.innerFirstinp button:hover {
+  background-color: #a2007d;
+  color: aqua;
+}
+
+
+.placeFirstLabel input {
+  border-radius: 3px;
+  border: none;
+  width: 50%;
+  height: 18px;
+  outline: none;
+  background-color: #92006e;
+  color: rgba(42, 190, 197, 0.85);
+  padding: 4px;
+  font-weight: bold;
+}
+
+
+.inputTmp {
+  width: 15% !important;
+}
+
+.placeFirstLabel button {
+  width: 10%;
+  height: 25px;
+  background-color: #92006e;
+  color: rgba(42, 190, 197, 0.85);
+  border: none;
+  border-radius: 3px;
+}
+
+.placeFirstLabel button:hover {
+  background-color: rgba(42, 190, 197, 0.85);
+  color: #92006e;
+}
+
+
+.DataList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.DataList::before {
+  content: "";
+  position: absolute;
+  background-color: #a2007d;
+  width: 1px;
+  height: calc(100% - 19px);
+  left: 14px;
+  top: -30px;
+  box-shadow: 0 0 8px 0.5px #a2007d;
+}
+
+
+.InnerListDataLabels {
+
+}
+
+.sc {
+  color: #a2007d;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.DataList li {
+  position: relative;
+  background-color: rgba(42, 190, 197, 0.52);
+  height: 20px;
+  margin-bottom: 24px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 0 0 8px 1px rgb(37, 37, 37);
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.InlineData {
+  font-weight: bold;
+}
+
+.DataList li::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 15px;
+  background-color: #a2007d;
+  left: -16px;
+  top: 15px;
+  box-shadow: 0 0 8px 0.5px #a2007d;
+}
+
+.GlobalUl label {
+
+}
+
+
+@media screen and (max-width: 1150px) {
+  .MobileContent {
+    position: relative;
+    top: 55px;
+    height: calc(100% - 55px);
+    overflow-y: scroll;
+  }
+
+  .GlobalHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .InnerLists{
+    float: left;
+  }
+
+  .InnerListLi{
+
+  }
+
+}

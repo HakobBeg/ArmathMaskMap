@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  /*background-image: linear-gradient(to right top, #2abec5, #2eb1d0, #50a3d1, #7193c8, #8983b6, #8f78ae, #966da3, #9c6196, #9e5596, #a04896, #a13895, #a32394);*/
+  /*background-image: linear-gradient(to right top, #2abec5, #2eb1d0, #50a3d1, #7193c8, #8983b6, #8f78ae, #966da3, #9c6196, #9e5596, #a04896, #a13895, #a32394);*/
+  background-repeat: no-repeat;
+
+  background-image: url("assets/91760822_2554411734818029_7831457313285210112_o.jpg");
+  backdrop-filter: blur(5px);
+
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
