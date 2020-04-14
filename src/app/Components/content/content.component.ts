@@ -107,8 +107,6 @@ export class ContentComponent implements OnInit, AfterViewChecked {
       this.listDef.nativeElement.firstElementChild.style.width = `calc(100% - ${beforeSize + 40}px)`;
       this.listDef.nativeElement.firstElementChild.style.left = `${firstWidth + 20}px`;
     }
-
-
   }
 
   removeCity(id: string) {
